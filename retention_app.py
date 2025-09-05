@@ -859,6 +859,15 @@ def main():
         calculator_page()
     else:
         about_page()
+    
+    # Footer with last updated timestamp
+    st.markdown("---")
+    st.markdown(
+        f"<div style='text-align: center; color: #666; font-size: 0.8em;'>"
+        f"Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}"
+        f"</div>", 
+        unsafe_allow_html=True
+    )
 
 if __name__ == "__main__":
     main()
