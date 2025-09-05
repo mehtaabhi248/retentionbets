@@ -735,7 +735,7 @@ def calculator_page():
     if experiment_details["type"] in ["Messaging Only", "Product + Messaging"]:
         p_new, channels = messaging_abc_channels()
     
-    if experiment_details["name"] and (delta_pc > 0 or p_new > 0) and st.button("Calculate Impact", type="primary"):
+    if experiment_details["name"] and st.button("Calculate Impact", type="primary"):
         results = calculate_impact(experiment_details, delta_pc, delta_rc, p_new)
         
         st.markdown("---")
